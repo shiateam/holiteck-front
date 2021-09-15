@@ -1,1 +1,178 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* @import "~bootstrap/dist/css/bootstrap.min.css"; */
+
+
+/* @import "assets/css/classy-nav.min.css"; */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    /* font-family: IRANYekan, sans-serif; */
+    background: #f4f4f4;
+}
+
+@font-face {
+    font-family: 'Myfont';
+    src: url('../node_modules/IRAN Sans Regular/IRAN Sans Regular.svg');
+    src: url('../node_modules/IRAN Sans Regular/IRAN Sans Regular.woff2');
+    src: url('../node_modules/IRAN Sans Regular/IRAN Sans Regular.woff');
+    src: url('../node_modules/IRAN Sans Regular/IRAN Sans Regular.eot');
+    src: url('../node_modules/IRAN Sans Regular/IRAN Sans Regular.ttf');
+}
+
+h1,
+li,
+h2,
+h3,
+p,
+h4,
+h5,
+h6,
+textarea,
+a,
+button,
+tr,
+th,
+strong,
+span,
+label,
+mat-tab,
+mat-tab-group,
+form {
+    font-family: MyFont !important;
+    font-size: 18px;
+}
+
+.carousel .carousel-indicators li {
+    width: 6.625rem;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+    padding: 10px;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.nav-r svg:not(:root).svg-inline--fa {
+    margin-top: 13px;
+    margin-right: -11px;
+}
+
+.mat-radio-label-content {
+    padding-right: 3px !important;
+}
+
+.carousel-indicators {
+    bottom: -48px !important;
+}
+
+.carousel .carousel-indicators li {
+    width: 6.625rem !important;
+}
+
+.bg-web-one {
+    background-color: #ef3768;
+    color: #fff;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #ef3768;
+}
+
+.font-color-1 {
+    color: #ef3768;
+}
+
+.bg-web-two {
+    background-color: #fff;
+}
+
+.rating li,
+.side-nav .social li {
+    display: inline-block;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+    float: right;
+    padding: 10px;
+}
+
+.card-title a {
+    text-decoration: none;
+    color: #ef6c00;
+}
+
+.card-title a :hover {
+    color: #ef6c00;
+}
+
+.owl-carousel .owl-dots.disabled,
+.owl-carousel .owl-nav.disabled {
+    display: block;
+}
+
+
+/* .owl-theme .owl-nav [class*=owl-] {
+    background: #ef6c00;
+} */
+
+.bg-web-three {
+    background-color: #fdffdc;
+}
+
+.slider {
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 5px 5px 5px 5px;
+    border-color: #FFFFFF;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 50%);
+}
+
+.font-weight-bold {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.filter-side .collapse p {
+    font-size: 16px;
+    color: #535353;
+}
+
+.pagination {
+    direction: ltr;
+}
+
+.page-link {
+    cursor: pointer;
+}
+
+.owl-prev,
+.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.owl-prev {
+    left: 0rem;
+}
+
+.owl-next {
+    right: 0rem;
+}
+
+.owl-theme .owl-nav [class*="owl-"] {
+    color: #ef3768;
+    font-size: 36px;
+    background: transparent;
+}

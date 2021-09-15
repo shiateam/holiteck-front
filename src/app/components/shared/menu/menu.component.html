@@ -1,1 +1,314 @@
-<p>menu works!</p>
+<!-- ============= COMPONENT ============== -->
+<header class="bg-web-two mb-2">
+    <nav class="navbar navbar-light bg-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../../../../assets/images/logo2.jpg" alt=""></a>
+            <h4 class="navbar-text">
+                <img src="../../../../assets/images/logo1.jpg" alt="">
+            </h4>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg  header  ">
+        <div class="container">
+            <!-- type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation" -->
+            <button class="navbar-toggler" (click)="toggleMenu()" #toggleButton>
+                <fa-icon [icon] = "faToggle" ></fa-icon> منو </button>
+            <div class="mobile-menu d-lg-block" id="main_nav">
+                <ul class="navbar-nav nav-r align-items-center">
+                    <li class="nav-item">
+                    </li>
+                    <li class="nav-item dropdown has-megamenu dropdown-hover position-static">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <fa-icon [icon]="faToggle"></fa-icon> دسته بندی کالاها</a>
+
+                        <div class="dropdown-menu megamenu " role="menu">
+                            <div class="row g-3">
+                                <div class="col-lg-2 col-6 part ">
+                                    <div class="col-megamenu">
+                                        <h6 class="title" [routerLink]="['/category/']" [queryParams]="{product:'Mobile'}">موبایل</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'Mobile', brand:'sumsong'}">سامسونگ</a></li>
+                                            <li><a href="#">شیایومی</a></li>
+                                            <li><a href="#">الجی</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'Mobile', brand :'apple'}">اپل</a></li>
+                                            <li><a href="#">نوکیا</a></li>
+                                            <li><a href="#">هواوی</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- col-megamenu.// -->
+                                </div>
+                                <!-- end col-3 -->
+                                <div class="col-lg-2 col-4 part">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">تبلت</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'Tablet', brand :'apple'}">سامسونگ</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'Tablet', brand :'apple'}">شیایومی</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'Tablet', brand :'apple'}">الجی</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'Tablet', brand :'apple'}">اپل</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'Tablet', brand :'apple'}">نوکیا</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'Tablet', brand :'apple'}">هواوی</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- col-megamenu.// -->
+                                </div>
+                                <!-- end col-3 -->
+                                <div class="col-lg-2 col-4 part">
+                                    <div class="col-megamenu">
+                                        <h6 class="title"> لوازم جانبی گوشی</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'Headset' , ordering:'id'}">هدست</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'PowerBank' , ordering:'id'}">پاوربانگ</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'ScreenGlass' , ordering:'id'}">گلس</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'MobileCovers' , ordering:'id'}"> کیف و کاور</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'MonopadVsHolder' , ordering:'id'}">منوپاد</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'ChargerAdabter' , ordering:'id'}">شارژر</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'Hcovers' , ordering:'id'}">کاور ایرپاد</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'MobileBattery' , ordering:'id'}">باتری موبایل</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'Converter' , ordering:'id'}">کابل و مبدل</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'ElectricConverter' , ordering:'id'}">کابل صدا و تصویر</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- col-megamenu.// -->
+                                </div>
+                                <div class="col-lg-2 col-4 part">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">کامپوتر و قطعات</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'SDCards', ordering:'id'}"> کارت حافظه و هارد کامپیوتر</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'FlashMemory', ordering:'id'}">فلش مموری</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'mouse', ordering:'id'}">موس</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'SmartWatch', ordering:'id'}">ساعت هوشمند</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'BluetoothDongle', ordering:'id'}"> دانگل بلوتوث</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'Modem', ordering:'id'}">  مودم</a></li>
+
+                                        </ul>
+                                    </div>
+                                    <!-- col-megamenu.// -->
+                                </div>
+                                <!-- end col-3 -->
+                                <div class="col-lg-2 col-4 part">
+                                    <div class="col-megamenu">
+                                        <h6 class="title">لوازم خانگی و اتومبیل</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'TV' , ordering:'id'}">تلویزیون</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'Speaker' , ordering:'id'}">اسپیکر</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'Amplifire' , ordering:'id'}">امپلی فایر</a></li>
+                                            <li><a [routerLink]="['/category/']" [queryParams]="{product:'CarPlayer' , ordering:'id'}">پخش اتومبیل</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- col-megamenu.// -->
+                                </div>
+                                <!-- end col-3 -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- dropdown-mega-menu.// -->
+                    </li>
+                    <li class="nav-item" routerLink="/">
+                        <a class="nav-link">
+                            <fa-icon [icon]="faHome"></fa-icon> خانه </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/contact">
+                            <fa-icon [icon]="faCard"></fa-icon> تماس با ما </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- mobile menu -->
+            <div class=" navbar-collapse mobile d-flex align-items-center" [ngClass]="{'sidenav': !isMenuCollapsed}" #menu>
+                <ul class="navbar-nav">
+                    <!-- <li class="nav-item">
+                        <a class="navbar-toggler closebtn" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+                &times;
+              </a>
+                    </li> -->
+                    <li class="nav-item">
+                        <form class="">
+                            <div class="input-group input-search d-flex align-items-center ">
+                                <input type="text" class="form-control" [formControl]="searchValue" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                <button type="button" class="btn input-group-text input-group-addon" (click)="search()"><i class="fa fa-search"></i></button>
+
+                            </div>
+                        </form>
+                        <hr>
+                    </li>
+                    <li class="nav-item product">
+                        <div class="d-flex align-items-center justify-content-between collapsible" (click)="isCollapsed1 = !isCollapsed1 ">
+                            <a class="nav-link " role="button">
+                                موبایل 
+                           </a>
+                            <div class="sb-sidenav-collapse-arrow" [ngClass]="{ 'collapsedIcon' : isCollapsed1}">
+                                <i class="bx bx-chevron-left"></i>
+                            </div>
+                        </div>
+
+                        <div class=" content" [ngClass]="{ 'active collapsed' : isCollapsed1}">
+                            <ul class="">
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'Mobile', brand:'sumsong'}">سامسونگ</a></li>
+                                <li><a href="#">شیایومی</a></li>
+                                <li><a href="#">الجی</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'Mobile', brand :'apple'}">اپل</a></li>
+                                <li><a href="#">نوکیا</a></li>
+                                <li><a href="#">هواوی</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item product">
+                        <div class="d-flex align-items-center justify-content-between" (click)="isCollapsed4 = !isCollapsed4 ">
+                            <a class="nav-link collapsible" role="button">
+                                تبلت
+                           
+                            </a>
+                            <div class="sb-sidenav-collapse-arrow" [ngClass]="{ 'collapsedIcon' : isCollapsed4}">
+                                <i class="bx bx-chevron-left"></i>
+                            </div>
+                        </div>
+
+                        <div class=" content" [ngClass]="{ 'active collapsed' : isCollapsed4}">
+                            <ul class="">
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'Tablet', brand :'apple'}">سامسونگ</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'Tablet', brand :'apple'}">شیایومی</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'Tablet', brand :'apple'}">الجی</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'Tablet', brand :'apple'}">اپل</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'Tablet', brand :'apple'}">نوکیا</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'Tablet', brand :'apple'}">هواوی</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item product">
+                        <div class="d-flex align-items-center justify-content-between" (click)="isCollapsed5 = !isCollapsed5 ">
+                            <a class="nav-link collapsible" role="button">
+                                لوازم جانبی گوشی
+                           
+                            </a>
+                            <div class="sb-sidenav-collapse-arrow" [ngClass]="{ 'collapsedIcon' : isCollapsed5}">
+                                <i class="bx bx-chevron-left"></i>
+                            </div>
+                        </div>
+
+                        <div class=" content" [ngClass]="{ 'active collapsed' : isCollapsed5}">
+                            <ul class="">
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'Headset' , ordering:'id'}">هدست</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'PowerBank' , ordering:'id'}">پاوربانگ</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'ScreenGlass' , ordering:'id'}">گلس</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'MobileCovers' , ordering:'id'}">کیف و کاور</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'MonopadVsHolder' , ordering:'id'}">منوپاد</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'ChargerAdabter' , ordering:'id'}">شارژر</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'Hcovers' , ordering:'id'}">کاور ایرپاد</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'MobileBattery' , ordering:'id'}">باتری موبایل</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'Converter' , ordering:'id'}">کابل و مبدل</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'ElectricConverter' , ordering:'id'}">کابل صدا و تصویر</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item product">
+                        <div class="d-flex align-items-center justify-content-between" (click)="isCollapsed6 = !isCollapsed6 ">
+                            <a class="nav-link collapsible" role="button">
+                                کامپوتر و قطعات
+                           
+                            </a>
+                            <div class="sb-sidenav-collapse-arrow" [ngClass]="{ 'collapsedIcon' : isCollapsed6}">
+                                <i class="bx bx-chevron-left"></i>
+                            </div>
+                        </div>
+
+                        <div class=" content" [ngClass]="{ 'active collapsed' : isCollapsed6}">
+                            <ul class="">
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'SDCards', ordering:'id'}">کارت حافظه و هارد کامپیوتر</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'FlashMemory', ordering:'id'}">فلش مموری</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'mouse', ordering:'id'}">موس</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'SmartWatch', ordering:'id'}">ساعت هوشمند</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'BluetoothDongle', ordering:'id'}"> دانگل بلوتوث</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'Modem', ordering:'id'}">  مودم</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item product">
+                        <div class="d-flex align-items-center justify-content-between" (click)="isCollapsed7 = !isCollapsed7 ">
+                            <a class="nav-link collapsible" role="button">
+            لوازم خانگی و اتومبیل
+                           
+                            </a>
+                            <div class="sb-sidenav-collapse-arrow" [ngClass]="{ 'collapsedIcon' : isCollapsed7}">
+                                <i class="bx bx-chevron-left"></i>
+                            </div>
+                        </div>
+
+                        <div class=" content" [ngClass]="{ 'active collapsed' : isCollapsed7}">
+                            <ul class="">
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'TV' , ordering:'id'}">تلویزیون</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'Speaker' , ordering:'id'}">اسپیکر</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'Amplifire' , ordering:'id'}">امپلی فایر</a></li>
+                                <li><a [routerLink]="['/category/']" [queryParams]="{product:'CarPlayer' , ordering:'id'}">پخش اتومبیل</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item product">
+                        <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true"> خانه</a>
+                    </li>
+                    <li class="nav-item product">
+                        <a class="nav-link" routerLink="/contact" (click)="isMenuCollapsed = true">تماس با ما </a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- navbar-collapse.// -->
+            <div class="navbar col-lg-4 mobile-menu d-lg-block search-box" style="position: absolute; top: 7px;">
+                <form class="">
+                    <div class="input-group input-search ">
+
+                        <input type="text" class="form-control" [formControl]="searchValue" placeholder="جستوجوی محصول" aria-label="Username" aria-describedby="basic-addon1">
+                        <button type="button" class="btn input-group-text input-group-addon" (click)="search()"><i class="fa fa-search"></i></button>
+
+                    </div>
+                </form>
+            </div>
+
+            <div class="navbar navbar-left d-flex justify-content-center align-items-center col-lg-2" style="position: absolute">
+                <ul class="navbar-nav align-items-center" style="flex-direction: row;">
+                    <li class="nav-link">
+                        <div *ngIf="auth.loggedIn; else loginForm " class="btn-group dropdown">
+                            <div class="d-flex justify-content-center align-items-center cart-dropdown user-dropdown" tabindex="0" role="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <!-- <fa-icon [icon]="faUser" title="ورود">
+                                </fa-icon> -->
+                                <button class="user-btn">حساب کاربری</button>
+                                <i class="bx bx-chevron-down"></i>
+                            </div>
+
+
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li class="d-flex  align-items-center dropdown-item"><i class="bx bx-user-circle p-1"></i><span routerLink="/dashboard/">حساب کاربری</span></li>
+                                <li class="dropdown-item d-flex  align-items-center"><i class="bx bx-log-in p-1"></i><a (click)="logout()">خروج</a></li>
+                            </ul>
+                        </div>
+                        <ng-template #loginForm>
+                            <!-- <fa-icon [icon]="faUser" routerLink="/login/" style="font-size: 20px;"></fa-icon> -->
+                            <div class="d-flex align-items-center faUser" routerLink="/login/">
+                                <i class="bx bx-log-out p-1"></i>
+                                <span class="p-1"> ورود به حساب کاربری </span>
+                            </div>
+                        </ng-template>
+                    </li>
+                    <li class="nav-link">
+                        <app-header-cart></app-header-cart>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <!-- container-fluid.// -->
+    </nav>
+</header>
+
+<!-- ============= COMPONENT END// ============== -->

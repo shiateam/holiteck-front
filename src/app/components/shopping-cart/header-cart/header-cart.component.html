@@ -1,0 +1,34 @@
+<div class="btn-group" *ngIf="cartItemQuantity ; else ShoppingCart" ngbDropdown>
+    <i class=" cart-dropdown bx bx-cart" tabindex="0" role="button" ngbDropdownToggle id="navbarDropdown7">
+    </i>
+    <!-- <span class="badge bg-warning position-absolute text-dark quantity">{{cartItemQuantity}}</span> -->
+    <span>({{cartItemQuantity |persianNumber}})</span>
+
+    <div class="dropdown-menu cart-menu" ngbDropdownMenu aria-labelledby="navbarDropdown7">
+        <div class="card">
+            <div class="card-body">
+                <div *ngFor="let cart of cartItems">
+                    <div class="d-flex justify-content-start">
+                        <img class="p-1" style="width: 50px;height: 50px;" src="http://holitech.ir{{cart.product.image}}" alt="Product">
+                        <span class="p-1">{{cart.product.title}} </span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p class="p-1">تعداد :<span class="p-1">{{cart.quantity |persianNumber}} عدد</span> </p>
+                        <p class="p-1">قیمت :<span>{{cart.product.price |persianNumber}} تومان</span></p>
+                    </div>
+                    <hr>
+
+                </div>
+
+
+
+                <p>قیمت کل : {{totalPrice | persianNumber}} تومان</p>
+                <a routerLink="/shopping-cart" class="card-link">مشاهده سبد خرید</a>
+                <a routerLink="/shopping-cart" class="card-link mr-3">ثبت سفارش</a>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #ShoppingCart>
+    <i class="nav-item bx bx-cart" routerLink="/shopping-cart/" *ngIf="auth.loggedIn"></i>
+</ng-template>

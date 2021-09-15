@@ -1,1 +1,72 @@
-<p>footer works!</p>
+<footer class="footer px-4">
+    <div class="container bottom_border">
+        <div class="row">
+            <!-- <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">آدرس فروشگاه</h5>
+                <p class="mb10">یزد شهرستان بافق خیابان امام رضا 31 فروشگاه هالیتک</p>
+                <p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
+                <p><i class="fa fa-phone"></i> +91-9999878398 </p>
+                <p><i class="fa fa fa-envelope"></i> info@example.com </p>
+
+
+            </div> -->
+
+
+            <div class=" col-sm-4 col-md  col-6 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">محصولات </h5>
+                <!--headin5_amrc-->
+                <ul class="footer_ul_amrc">
+                    <li><a [routerLink]="['/category/']" [queryParams]="{product:'Mobile'}">موبایل</a></li>
+                    <li><a [routerLink]="['/category/']" [queryParams]="{product:'Tablet'}">تبلت</a></li>
+                    <li><a [routerLink]="['/category/']" [queryParams]="{product:'SDCards', ordering:'id'}">هارد</a></li>
+                    <li><a [routerLink]="['/category/']" [queryParams]="{product:'FlashMemory', ordering:'id'}">فلش مموری</a></li>
+                    <li><a [routerLink]="['/category/']" [queryParams]="{product:'Headset' , ordering:'id'}">هندزفری</a></li>
+                    <li><a [routerLink]="['/category/']" [queryParams]="{product:'ChargerAdabter' , ordering:'id'}">شارژر</a></li>
+                </ul>
+                <!--footer_ul_amrc ends here-->
+            </div>
+
+
+            <div class=" col-sm-4 col-md  col-6 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">محصولات</h5>
+                <!--headin5_amrc-->
+                <ul class="footer_ul_amrc">
+                    <li><a [routerLink]="['/category/']" [queryParams]="{product:'PowerBank' , ordering:'id'}">پاور بانک</a></li>
+                    <li><a [routerLink]="['/category/']" [queryParams]="{product:'CarPlayer' , ordering:'id'}">پخش خودرو</a></li>
+                    <li><a [routerLink]="['/category/']" [queryParams]="{product:'Speaker' , ordering:'id'}">اسپیکر</a></li>
+                    <li><a [routerLink]="['/category/']" [queryParams]="{product:'Amplifire' , ordering:'id'}">امپلی فایر</a></li>
+                    <li><a [routerLink]="['/category/']" [queryParams]="{product:'TV' , ordering:'id'}">تلویزیون</a></li>
+                </ul>
+                <!--footer_ul_amrc ends here-->
+            </div>
+
+
+            <div class=" col-sm-4 col-md  col-12 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">نماد اعتماد</h5>
+                <!--headin5_amrc ends here-->
+                <a referrerpolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=225979&amp;Code=LCvV6XK9XXovodrAqiZs"><img referrerpolicy="origin" src="https://Trustseal.eNamad.ir/logo.aspx?id=225979&amp;Code=LCvV6XK9XXovodrAqiZs" alt="" style="cursor:pointer" id="LCvV6XK9XXovodrAqiZs"></a>
+
+                <!--footer_ul2_amrc ends here-->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <ul class="foote_bottom_ul_amrc">
+            <li><a [routerLink]="'.'">خانه</a></li>
+            <li><a routerLink="/contact">تماس با ما</a></li>
+        </ul>
+        <!--foote_bottom_ul_amrc ends here-->
+        <p class="text-center"> <a href="#">شیاتیم</a></p>
+
+        <ul class="social_footer_ul">
+            <li><a><i class="fab fa-facebook-f"></i></a></li>
+            <li><a><i class="fab fa-twitter"></i></a></li>
+            <li><a><i class="fab fa-linkedin"></i></a></li>
+            <li><a><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        <!--social_footer_ul ends here-->
+    </div>
+
+</footer>

@@ -1,0 +1,18 @@
+<div class="card my-4">
+    <div class="card-body">
+        <div *ngIf="status == 100 || status==101 ; else payCancel" class="d-flex justify-content-center">
+            <div class="alert alert-success w-100" role="alert">
+                <h4 class="alert-heading">سپاس از خرید شما </h4>
+            </div>
+        </div>
+        <ng-template #payCancel>
+            <div class="d-flex justify-content-center">
+                <div class="alert alert-danger w-100" role="alert">
+                    <h4 class="alert-heading">لغو خرید</h4>
+                </div>
+
+            </div>
+        </ng-template>
+
+    </div>
+</div>

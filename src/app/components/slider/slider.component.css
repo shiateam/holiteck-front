@@ -1,0 +1,108 @@
+.relative {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+/*-------- Start Banner Area ------------*/
+
+.banner-area {
+    height: 20vh;
+    background: rgba(101, 8, 127, 0.81) center;
+    background-size: cover;
+}
+
+.banner-area .container-fluid {
+    padding-left: 15%;
+    padding-right: 20%;
+}
+
+@media (max-width: 992px) {
+    .banner-area .container-fluid {
+        padding-left: 10%;
+        padding-right: 13%;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-area .banner-img {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .fullscreen {
+        height: 700px !important;
+    }
+}
+
+.banner-content {
+    text-align: left;
+}
+
+@media (max-width: 767px) {
+    .banner-content {
+        padding: 0 10%;
+    }
+}
+
+.banner-content h1 {
+    font-size: 60px;
+    font-weight: 100;
+    margin-top: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .banner-content h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .banner-content h1 br {
+        display: none;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .banner-content h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-content h1 {
+        font-size: 32px;
+    }
+}
+
+.banner-content h1 span {
+    color: #0093df;
+}
+
+.banner-content .primary-btn {
+    font-size: 13px;
+}
+
+.banner-content .primary-btn:hover {
+    background-color: #fff;
+    color: #0093df;
+}
+
+.slider .image-side img {
+    width: 100%;
+    border-radius: 15%;
+    padding: 10px;
+    margin: auto;
+    height: 210px;
+}
+
+
+/*-------- End Banner Area ------------*/

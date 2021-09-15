@@ -1,0 +1,34 @@
+.card-body ul li {
+    list-style: none;
+    margin-right: -40px;
+    padding-bottom: 13px;
+}
+
+.bx-user-circle {
+    font-size: 30px;
+}
+
+.phone {
+    margin-right: 130px;
+}
+
+.address ul li i {
+    color: #ef6c00;
+}
+
+.address ul li i::before {
+    margin-left: 8px;
+}
+
+.username p {
+    margin-top: 5px;
+    margin-right: 2px;
+}
+
+.profile-side ul li a {
+    cursor: pointer;
+}
+
+.profile-side ul li a:hover {
+    color: #ef3768;
+}

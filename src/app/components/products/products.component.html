@@ -1,0 +1,11 @@
+<section class="mt-120">
+    <div class="container mt-15">
+        <div class="row justify-content-center d-flex align-items-center">
+            <ng-container *ngFor="let p of Product">
+                <div class="col-sm-4 col-md-3 mb-2">
+                    <app-product-card [product]="p"></app-product-card>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>

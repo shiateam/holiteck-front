@@ -1,0 +1,52 @@
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.example-radio-button {
+    margin: 5px;
+}
+
+.filter-side .sort,
+.brand {
+    cursor: pointer;
+}
+
+.collapse-arrow {
+    float: left;
+    transition: transform 1s ease;
+}
+
+.collapsedIcon {
+    transform: rotate(180deg);
+}
+
+mat-slider {
+    width: 250px;
+}
+
+.bx-chevron-down {
+    font-size: 18px;
+}
+
+.font-weight-bold {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.filter-side .collapse p {
+    font-size: 16px;
+    color: #535353;
+}
+
+.collapse p a {
+    cursor: pointer;
+}
+
+@media (max-width: 790px) {
+    .mx-xs-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

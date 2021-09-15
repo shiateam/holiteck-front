@@ -1,0 +1,32 @@
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.example-radio-button {
+    margin: 5px;
+}
+
+.filter-side .sort,
+.brand {
+    cursor: pointer;
+}
+
+.collapse-arrow {
+    float: left;
+    transition: transform 1s ease;
+}
+
+.collapsedIcon {
+    transform: rotate(180deg);
+}
+
+mat-slider {
+    width: 250px;
+}
+
+.collapse p a {
+    cursor: pointer;
+    padding-right: 30px;
+}

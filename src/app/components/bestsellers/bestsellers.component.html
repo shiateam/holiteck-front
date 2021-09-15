@@ -1,0 +1,15 @@
+<section class="section pt-4">
+
+    <h4 class="font-weight-bold mt-4 font-color-1">
+        <h4>پرفروشترین ها</h4>
+    </h4>
+    <hr class="red mb-5">
+    <div class=" container-fluid bg-web-two slider">
+        <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide class="d-flex justify-content-center" *ngFor="let product of products">
+                <app-product-card [product]="product"></app-product-card>
+
+            </ng-template>
+        </owl-carousel-o>
+    </div>
+</section>

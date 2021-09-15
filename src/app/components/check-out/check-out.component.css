@@ -1,0 +1,16 @@
+.jumbotron {
+    background: #fff;
+}
+
+.lead {
+    font-size: 15px;
+}
+
+.username {
+    color: #62666d;
+}
+
+.changeAddress {
+    text-decoration: none;
+    cursor: pointer;
+}

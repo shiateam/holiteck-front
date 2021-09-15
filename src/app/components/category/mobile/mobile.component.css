@@ -1,0 +1,20 @@
+.filter-side {
+    background-color: #eadede;
+}
+
+.rating li,
+.side-nav .social li {
+    display: inline-block;
+}
+
+.form-check-label {
+    padding-right: 35px;
+}
+
+.filter-brand ul {
+    list-style: none;
+}
+
+.filter-brand ul li {
+    margin-right: -38px;
+}

@@ -1,4 +1,53 @@
 owl-carousel-o mdb-card {
-  margin-left:15px;
-  margin-right: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.rating {
+    color: #ffa000;
+    list-style-type: none;
+    padding: 0;
+}
+
+.fa-star:before {
+    content: "\f005";
+}
+
+element.style {}
+
+.rating {
+    color: #ffa000;
+    list-style-type: none;
+    padding: 0;
+}
+
+dl,
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+user agent stylesheet ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.slider {
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 5px 5px 5px 5px;
+    border-color: #FFFFFF;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 50%);
 }

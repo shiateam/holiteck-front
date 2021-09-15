@@ -1,1 +1,231 @@
-<p>product-detail works!</p>
+<!--Section: Block Content-->
+<section class="mb-5 " *ngIf="Product">
+    <div class="px-3">
+        <div class="row mb-4">
+            <div class="col-lg-5 col-md-6  col-12 mb-4 mb-md-0">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button> -->
+                        <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+                        <img src="http://holitech.ir{{Product.image}}" class="border p-2" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+                        <img src="http://holitech.ir{{Product.image1}}" class="border p-2" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2">
+                        <img src="http://holitech.ir{{Product.image2}}" class="border p-2" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3">
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="http://holitech.ir{{Product.image}}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="http://holitech.ir{{Product.image1}}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="http://holitech.ir{{Product.image2}}" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+                </div>
+                <!-- <div class="col-lg-4 left-side-product-box pb-3">
+            <img src="http://nicesnippets.com/demo/pd-image1.jpg" class="border p-3">
+            <span class="sub-img">
+					<img src="http://nicesnippets.com/demo/pd-image2.jpg" class="border p-2">
+					<img src="http://nicesnippets.com/demo/pd-image3.jpg" class="border p-2">
+					<img src="http://nicesnippets.com/demo/pd-image4.jpg" class="border p-2">
+				</span>
+        </div> -->
+            </div>
+            <div class="col-lg-7 col-md-6 col-12 col-12 card margin-top-mobile">
+                <div class="card-body">
+                    <h5>{{Product.title}}</h5>
+                    <p class="mb-2 text-muted text-uppercase small">{{Product.code}}</p>
+                    <!-- <div class="table-responsive mb-2">
+                    <table class="table table-sm table-borderless">
+                        <tbody>
+                            <tr>
+                                <td class="pb-0">رنگ : {{Product.color.color}}</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="mt-1">
+                                        <mat-radio-group aria-label="Select an option">
+                                            <mat-radio-button value="1">سبز</mat-radio-button>
+                                            <mat-radio-button value="2">سفید</mat-radio-button>
+                                        </mat-radio-group>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> -->
+                    <!-- <ul class="rating">
+                    <li>
+                        <i class="fas fa-star fa-sm "></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm "></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm "></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm "></i>
+                    </li>
+                    <li>
+                        <i class="far fa-star fa-sm "></i>
+                    </li>
+                </ul> -->
+                    <p><span class="mr-1"><strong style="font-size: 20px;">{{Product.price|persianNumber}} تومان</strong></span></p>
+                    <!-- <p class="pt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis voluptates laboriosam. Distinctio, officia quis dolore quos sapiente tempore alias.</p> -->
+                    <div class="table-responsive">
+                        <table class="table table-sm table-borderless mb-0">
+                            <tbody>
+                                <tr>
+                                    <th class="pl-0 w-25" scope="row"><strong>رنگ</strong></th>
+                                    <td>{{Product.color.color}}</td>
+                                </tr>
+                                <tr>
+                                    <th class="pl-0 w-25" scope="row"><strong>برند</strong></th>
+                                    <td>{{Product.brand.Brand}}</td>
+                                </tr>
+                                <tr>
+                                    <th class="pl-0 w-25" scope="row"><strong>فروشنده</strong></th>
+                                    <td>{{Product.owner.shop_name}}</td>
+                                </tr>
+                                <tr>
+                                    <th class="pl-0 w-25" scope="row"><strong>گارانتی</strong></th>
+                                    <td>{{Product.guarantee.guarantee}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr>
+                    <button type="button" class="btn bg-web-one btn-md mr-1 mb-2" (click)="handleAddToCart(Product)">
+                افزودن به سبد خرید <i
+                class="fas fa-shopping-cart pr-2"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="card my-5 px-3">
+            <mat-tab-group animationDuration="0ms" class="card-body">
+                <mat-tab label=" بررسی محصول">
+                    <div class="tab-pane  show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+
+                        <p class="pt-1">{{Product.title}}</p>
+                    </div>
+                </mat-tab>
+                <mat-tab label="مشخصات">
+                    <div [ngSwitch]="label">
+                        <div class="tab-pane " id="info" role="tabpanel" aria-labelledby="info-tab" *ngSwitchCase="1">
+                            <h4>مشخصات کلی</h4>
+                            <table class="table table-striped table-bordered mt-3">
+                                <thead>
+                                    <tr>
+                                        <th scope="row" class="w-150 dark-grey-text h6">وزن</th>
+                                        <td><em>0.3 kg</em></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="w-150 dark-grey-text h6">ابعاد</th>
+                                        <td><em>50 × 60 cm</em></td>
+                                    </tr>
+                                </tbody>
+                                <thead>
+                                    <tr>
+                                        <th scope="row" class="w-150 dark-grey-text h6">تعداد سیم کارت</th>
+                                        <td><em>2 </em></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="w-150 dark-grey-text h6">حافظه داخلی</th>
+                                        <td><em>128 گیگا بایت</em></td>
+                                    </tr>
+                                </tbody>
+                                <thead>
+                                    <tr>
+                                        <th scope="row" class="w-150 dark-grey-text h6"> RAM</th>
+                                        <td><em>6G </em></td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div *ngSwitchCase="2">
+                            <p>flash</p>
+                        </div>
+                        <div *ngSwitchCase="3">
+                            <p>flash</p>
+                        </div>
+                        <div *ngSwitchCase="4">
+                            <h4>مشخصات کلی</h4>
+                            <table class="table table-striped table-bordered mt-3">
+                                <thead>
+                                    <tr>
+                                        <th scope="row" class="w-150 dark-grey-text h6">ولتاژ ورودی</th>
+                                        <td><em>{{Product.enter_volt}}</em></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="w-150 dark-grey-text h6">ابعاد</th>
+                                        <td><em>{{Product.dimensions}}</em></td>
+                                    </tr>
+                                </tbody>
+                                <thead>
+                                    <tr>
+                                        <th scope="row" class="w-150 dark-grey-text h6">out_gate_count</th>
+                                        <td><em>{{Product.out_gate_count}} </em></td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div *ngSwitchCase="5">
+                            <p>flash</p>
+                        </div>
+                        <div *ngSwitchCase="6">
+                            <p>flash</p>
+                        </div>
+                        <div *ngSwitchCase="7">
+                            <p>flash</p>
+                        </div>
+                        <div *ngSwitchCase="8">
+                            <p>flash</p>
+                        </div>
+                        <div *ngSwitchCase="9">
+                            <p>flash</p>
+                        </div>
+                        <div *ngSwitchCase="10">
+                            <p>flash</p>
+                        </div>
+                        <div *ngSwitchCase="11">
+                            <p>flash</p>
+                        </div>
+                        <div *ngSwitchCase="12">
+                            <p>flash</p>
+                        </div>
+                        <div *ngSwitchCase="13">
+                            <p>flash</p>
+                        </div>
+                    </div>
+
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+
+
+
+    <!--Section: Block Content-->
+
+
+</section>
+<swal #deleteSwal title="اخطار" text="ابتدا وارد سایت شوید" icon="error" [showCancelButton]="true" [focusCancel]="true">
+</swal>

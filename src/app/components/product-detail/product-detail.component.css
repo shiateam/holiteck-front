@@ -1,0 +1,105 @@
+@media (min-width: 992px) {
+    .carousel .carousel-indicators {
+        margin-bottom: -5rem !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width:991px) {
+    .carousel .carousel-indicators {
+        margin-bottom: -3rem !important;
+    }
+}
+
+@media (max-width:767px) {
+    .carousel .carousel-indicators {
+        margin-bottom: -1rem !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel .carousel-indicators img {
+        width: 5.625rem;
+        height: 86px;
+    }
+}
+
+@media (min-width:758px) and (max-width:991px) {
+    .carousel .carousel-indicators img {
+        width: 3.625rem;
+        height: 50px;
+    }
+}
+
+@media(max-width:757px) {
+    .carousel .carousel-indicators img {
+        width: 2.625rem;
+        height: 40px;
+    }
+}
+
+@media (max-width:767px) {
+    .margin-top-mobile {
+        margin-top: 36px !important;
+    }
+}
+
+.fa-star:before {
+    content: "\f005";
+}
+
+.left-side-product-box img {
+    width: 100%;
+}
+
+.left-side-product-box .sub-img img {
+    margin-top: 5px;
+    width: 83px;
+    height: 100px;
+}
+
+.rating {
+    color: #ef6c00;
+    list-style-type: none;
+    padding: 0;
+}
+
+dl,
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+user agent stylesheet ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.rating li,
+.side-nav .social li {
+    display: inline-block;
+}
+
+.rating .fa-star {
+    color: #ef6c00;
+}
+
+.mat-radio-button~.mat-radio-button {
+    margin-left: 16px;
+}
+
+.my-5 {
+    margin-top: 8rem !important;
+    margin-bottom: 6rem !important;
+}

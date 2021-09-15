@@ -1,127 +1,69 @@
-<owl-carousel-o [options]="customOptions">
-  <ng-template carouselSlide class="d-flex justify-content-center"><!-- Card -->
-    <mdb-card>
-      <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-        <!-- Card img -->
-        <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"></mdb-card-img>
-        <a>
-          <div class="mask"></div>
-        </a>
-      </div>
-      <!--Card content-->
-      <mdb-card-body>
-        <!--Title-->
-        <mdb-card-title>
-          <h4>Card Title</h4>
-        </mdb-card-title>
+<section class="section pt-4">
 
-        <!--Text-->
-        <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-          content.
-        </mdb-card-text>
+    <h4 class="font-weight-bold mt-4 font-color-1">
+        <h4>محصولات ویژه</h4>
+    </h4>
+    <hr class="red mb-5">
+    <div class="pt-5 container bg-web-two slider">
+        <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide class="d-flex justify-content-center" *ngFor="let i of [1 , 2 , 3 , 4]">
+                <!--Card-->
+                <div class="card card-ecommerce">
 
-        <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-      </mdb-card-body>
-    </mdb-card>
-    <!-- Card --></ng-template>
-  <ng-template carouselSlide  class="d-flex justify-content-center"><!-- Card -->
-    <mdb-card>
-      <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-        <!-- Card img -->
-        <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"></mdb-card-img>
-        <a>
-          <div class="mask"></div>
-        </a>
-      </div>
-      <!--Card content-->
-      <mdb-card-body>
-        <!--Title-->
-        <mdb-card-title>
-          <h4>Card Title</h4>
-        </mdb-card-title>
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/11.jpg" class="img-fluid" alt="">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--Card image-->
 
-        <!--Text-->
-        <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-          content.
-        </mdb-card-text>
+                    <!--Card content-->
+                    <div class="card-body">
+                        <!--Category & Title-->
 
-        <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-      </mdb-card-body>
-    </mdb-card>
-    <!-- Card --></ng-template>
-  <ng-template carouselSlide  class="d-flex justify-content-center"><!-- Card -->
-    <mdb-card>
-      <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-        <!-- Card img -->
-        <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"></mdb-card-img>
-        <a>
-          <div class="mask"></div>
-        </a>
-      </div>
-      <!--Card content-->
-      <mdb-card-body>
-        <!--Title-->
-        <mdb-card-title>
-          <h4>Card Title</h4>
-        </mdb-card-title>
+                        <h5 class="card-title mb-1">
+                            <strong>
+                              <a href="" class="font-color-1">iPhone 5</a>
+                          </strong>
+                        </h5>
+                        <span class="badge badge-danger mb-2">bestseller</span>
+                        <!-- Rating -->
+                        <ul class="rating">
+                            <li>
+                                <i class="fas fa-star blue-text"></i>
+                            </li>
+                            <li>
+                                <i class="fas fa-star blue-text"></i>
+                            </li>
+                            <li>
+                                <i class="fas fa-star blue-text"></i>
+                            </li>
+                            <li>
+                                <i class="fas fa-star blue-text"></i>
+                            </li>
+                            <li>
+                                <i class="fas fa-star blue-text"></i>
+                            </li>
+                        </ul>
 
-        <!--Text-->
-        <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-          content.
-        </mdb-card-text>
+                        <!--Card footer-->
+                        <div class="card-footer pb-0">
+                            <div class="row mb-0">
+                                <span class="float-left">
+                                  <strong>799 تومان</strong>
+                              </span>
 
-        <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-      </mdb-card-body>
-    </mdb-card>
-    <!-- Card --></ng-template>
-  <ng-template carouselSlide  class="d-flex justify-content-center"><!-- Card -->
-    <mdb-card>
-      <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-        <!-- Card img -->
-        <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"></mdb-card-img>
-        <a>
-          <div class="mask"></div>
-        </a>
-      </div>
-      <!--Card content-->
-      <mdb-card-body>
-        <!--Title-->
-        <mdb-card-title>
-          <h4>Card Title</h4>
-        </mdb-card-title>
+                            </div>
+                        </div>
 
-        <!--Text-->
-        <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-          content.
-        </mdb-card-text>
+                    </div>
+                    <!--Card content-->
 
-        <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-      </mdb-card-body>
-    </mdb-card>
-    <!-- Card --></ng-template>
-  <ng-template carouselSlide  class="d-flex justify-content-center"><!-- Card -->
-    <mdb-card>
-      <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-        <!-- Card img -->
-        <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap"></mdb-card-img>
-        <a>
-          <div class="mask"></div>
-        </a>
-      </div>
-      <!--Card content-->
-      <mdb-card-body>
-        <!--Title-->
-        <mdb-card-title>
-          <h4>Card Title</h4>
-        </mdb-card-title>
-
-        <!--Text-->
-        <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-          content.
-        </mdb-card-text>
-
-        <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
-      </mdb-card-body>
-    </mdb-card>
-    <!-- Card --></ng-template>
-</owl-carousel-o>
+                </div>
+                <!--Card-->
+            </ng-template>
+        </owl-carousel-o>
+    </div>
+</section>

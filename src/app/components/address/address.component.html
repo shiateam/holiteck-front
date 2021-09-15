@@ -1,0 +1,50 @@
+<!-- Default form register -->
+<div class="d-flex justify-content-center my-5">
+    <div class="card h-100" style="width: 60%;">
+        <div class="card-header d-flex justify-content-center align-items-center bg-web-one">
+            <p class="h4">آدرس خریدار</p>
+        </div>
+        <div class="card-body">
+            <form class="text-center border border-light p-5 ">
+
+
+                <div class="form-row mb-4  input-group">
+                    <div class="col p-1">
+                        <input [formControl]="firstName" class="form-control" placeholder="نام">
+                    </div>
+                    <div class="col p-1">
+                        <!-- Last name -->
+                        <input [formControl]="lastName" id="defaultRegisterFormLastName" class="form-control" placeholder="نام خانوادگی ">
+                    </div>
+                </div>
+                <div class="form-row mb-4 input-group">
+                    <div class="col p-1">
+                        <input [formControl]="province" id="defaultRegisterFormLastName" class="form-control" placeholder="استان ">
+                    </div>
+                    <div class="col p-1">
+                        <!-- Last name -->
+                        <input [formControl]="city" id="defaultRegisterFormLastName" class="form-control" placeholder="شهر ">
+                    </div>
+                </div>
+                <!-- Phone number -->
+                <input type="text" id="defaultRegisterPhonePassword" class="form-control mb-4" placeholder=" آدرس" [formControl]="district">
+                <div class="form-row mb-4">
+                    <div class="col">
+                        <!-- Last name -->
+                        <input id="defaultRegisterFormLastName" [formControl]="postcode" class="form-control" placeholder="کد پستی ">
+                    </div>
+                </div>
+                <!-- Sign up button -->
+
+                <div class="d-grid gap-2 ">
+                    <button block="true" class="btn  bg-web-one" (click)="createAddress()">ذخیره</button>
+                </div>
+
+
+
+
+            </form>
+        </div>
+    </div>
+    <!-- Default form register -->
+</div>

@@ -1,0 +1,222 @@
+<div class="px-5">
+    <div class="row my-5 ">
+        <div class="col-lg-3 profile-side ">
+            <div class="card">
+
+                <div class="card-body">
+                    <div class=" d-flex align-items username">
+                        <i class="bx bx-user-circle"></i>
+
+                        <p *ngIf="Address.address, else username">{{Address.address.first_name}} {{Address.address.last_name}}</p>
+                        <ng-template #username>
+                            <p>بدون نام</p>
+                        </ng-template>
+
+                    </div>
+                    <hr>
+                    <ul class="">
+                        <li class="d-flex align-items-center"><i class="bx bx-map p-1"></i><a (click)="labale = 1">سفارش ها</a> </li>
+                        <li class="d-flex align-items-center"><i class="fa fa-map-signs p-1"></i><a (click)="labale = 2">نشانی ها</a> </li>
+                        <li class="d-flex align-items-center" (click)="logout()"><i class="bx bx-log-in p-1"></i><a> خروج</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <div class="card">
+                <div class="card-body" [ngSwitch]="labale">
+                    <div *ngSwitchCase="1">
+                        <p>تاریخچه ی سفارشات</p>
+                        <mat-tab-group animationDuration="0ms">
+                            <mat-tab label="در حال پردازش ">
+                                <div *ngIf="ProcessingOrder.length ; else emptyProcess">
+                                    <div *ngFor=" let order of ProcessingOrder">
+                                        <div>
+                                            <h4 class="mt-2">جزییات سفارش</h4>
+                                        </div>
+                                        <hr>
+                                        <div>
+                                            <div class="d-flex">
+                                                <p class="">تحویل گیرنده <span>:</span><span>{{order.first_name}} {{order.last_name}}</span></p>
+                                                <p class="phone">شماره تماس <span>:</span> <span>{{order.mobile | persianNumber}}</span></p>
+                                            </div>
+                                            <div>
+                                                <p>ارسال به <span>:</span>{{order.province}}،{{order.city}}،{{order.district}}</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div>
+                                            <p>مبلغ کل <span>:</span> <span>{{order.totalprice | persianNumber}}</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ng-template #emptyProcess>
+                                    <div class="d-flex justify-content-start mt-5">
+                                        <i class="fa fa-exclamation-triangle p-1"></i>
+                                        <p> سفارش فعالی در این بخش وجود ندارد.</p>
+                                    </div>
+
+                                </ng-template>
+                            </mat-tab>
+                            <mat-tab label="فرستاده شده">
+                                <div *ngIf="SendedOrder.length ; else emptySended">
+                                    <div *ngFor=" let order of SendedOrder">
+                                        <div>
+                                            <h4 class="mt-2"> سفارش {{order.id|persianNumber}}</h4>
+                                        </div>
+
+                                        <div>
+                                            <div class="d-flex">
+                                                <p class="">تحویل گیرنده <span>:</span><span>{{order.first_name}} {{order.last_name}}</span></p>
+                                                <p class="phone">شماره تماس <span>:</span> <span>{{order.mobile | persianNumber}}</span></p>
+                                            </div>
+                                            <div>
+                                                <p>ارسال به <span>:</span>{{order.province}}،{{order.city}}،{{order.district}}</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p>مبلغ کل <span>:</span> <span>{{order.totalprice | persianNumber}}</span></p>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                                <ng-template #emptySended>موجود نیست</ng-template>
+                            </mat-tab>
+                            <mat-tab label="تحویل شده">
+                                <div *ngIf="DeliveredOrder.length ; else emptyDelivered">
+                                    <div *ngFor=" let order of DeliveredOrder">
+                                        <div>
+                                            <h4 class="mt-2">جزییات سفارش</h4>
+                                        </div>
+                                        <hr>
+                                        <div>
+                                            <div class="d-flex">
+                                                <p class="">تحویل گیرنده <span>:</span><span>{{order.first_name}} {{order.last_name}}</span></p>
+                                                <p class="phone">شماره تماس <span>:</span> <span>{{order.mobile | persianNumber}}</span></p>
+                                            </div>
+                                            <div>
+                                                <p>ارسال به <span>:</span>{{order.province}}،{{order.city}}،{{order.district}}</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div>
+                                            <p>مبلغ کل <span>:</span> <span>{{order.totalprice | persianNumber}}</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ng-template #emptyDelivered>
+                                    <p>موجود نیست</p>
+                                </ng-template>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </div>
+                    <div *ngSwitchCase="2">
+                        <div class="address  card-body" *ngIf="Address.address , else addresscreate">
+                            <p>نشانی</p>
+                            <ul>
+                                <li><i class="bx bx-map"></i> {{Address.address.province}} ، {{Address.address.city}} ،{{Address.address.district}}</li>
+                                <li> <i class="fa fa-phone"></i> {{Address.address.mobile}}</li>
+                                <li><i class="fa fa-envelope"></i>{{Address.address.postcode|persianNumber}}</li>
+                                <li><i class="fa fa-user"></i>{{Address.address.first_name}} {{Address.last_name}}</li>
+                            </ul>
+
+                            <button class="btn bg-web-one " (click)="open(content)">ویرایش آدرس </button>
+                        </div>
+                        <ng-template #addresscreate>
+                            <p>نشانی موجود نیست</p>
+                            <button routerLink="/address">افزودن آدرس</button>
+                        </ng-template>
+                    </div>
+                    <div *ngSwitchCase="3">
+                        <p>lists</p>
+                    </div>
+                    <div *ngSwitchCase="4">
+                        <p>carts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">ویرایش محل ارسال</h4>
+        <!-- <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+    </div>
+    <div class="modal-body">
+        <form class="text-center border border-light p-5 ">
+
+            <p class="h4 mb-4">آدرس خریدار</p>
+            <div class="form-row mb-4">
+                <div class="col">
+                    <input [formControl]="first_name" class="form-control" placeholder="نام">
+                </div>
+                <div class="col">
+                    <!-- Last name -->
+                    <input [formControl]="last_name" id="defaultRegisterFormLastName" class="form-control" placeholder="نام خانوادگی ">
+                </div>
+            </div>
+            <div class="form-row mb-4">
+                <div class="col">
+                    <select name="state" [formControl]="province">
+                        <option value="0">لطفا استان را انتخاب نمایید</option>
+                        <option value="1">تهران</option>
+                        <option value="2">گیلان</option>
+                        <option value="3">آذربایجان شرقی</option>
+                        <option value="4">خوزستان</option>
+                        <option value="5">فارس</option>
+                        <option value="6">اصفهان</option>
+                        <option value="7">خراسان رضوی</option>
+                        <option value="8">قزوین</option>
+                        <option value="9">سمنان</option>
+                        <option value="10">قم</option>
+                        <option value="11">مرکزی</option>
+                        <option value="12">زنجان</option>
+                        <option value="13">مازندران</option>
+                        <option value="14">گلستان</option>
+                        <option value="15">اردبیل</option>
+                        <option value="16">آذربایجان غربی</option>
+                        <option value="17">همدان</option>
+                        <option value="18">کردستان</option>
+                        <option value="19">کرمانشاه</option>
+                        <option value="20">لرستان</option>
+                        <option value="21">بوشهر</option>
+                        <option value="22">کرمان</option>
+                        <option value="23">هرمزگان</option>
+                        <option value="24">چهارمحال و بختیاری</option>
+                        <option value="25">یزد</option>
+                        <option value="26">سیستان و بلوچستان</option>
+                        <option value="27">ایلام</option>
+                        <option value="28">کهگلویه و بویراحمد</option>
+                        <option value="29">خراسان شمالی</option>
+                        <option value="30">خراسان جنوبی</option>
+                        <option value="31">البرز</option>
+                    </select>
+                    <!-- <select name="city" id="city">
+                        <option value="0">لطفا استان را انتخاب نمایید</option>
+                    </select> -->
+                </div>
+                <div class="col">
+                    <!-- Last name -->
+                    <input [formControl]="city" id="defaultRegisterFormLastName" class="form-control" placeholder="شهر ">
+                </div>
+            </div>
+            <!-- Phone number -->
+            <input type="text" id="defaultRegisterPhonePassword" class="form-control mb-4" placeholder=" ناحیه" [formControl]="district">
+            <div class="form-row mb-4">
+                <div class="col">
+                    <!-- Last name -->
+                    <input type="number" id="defaultRegisterFormLastName" [formControl]="postcode" class="form-control" placeholder="کد پستی ">
+                </div>
+            </div>
+            <!-- Sign up button -->
+
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="changeAddress(modal)">ذخیره</button>
+    </div>
+</ng-template>

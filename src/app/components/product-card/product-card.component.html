@@ -1,1 +1,33 @@
-<p>product-card works!</p>
+<!--Card-->
+<div *ngIf="product.title" class="card card-ecommerce">
+
+    <!--Card image-->
+    <div class="view overlay d-flex align-items-center  justify-content-center">
+        <img src="http://holitech.ir/{{imageUrl}}" class="img-fluid" alt="">
+
+    </div>
+    <!--Card image-->
+
+    <!--Card content-->
+    <div class="card-body product-card">
+        <!--Category & Title-->
+        <div class="mb-1 card-title d-flex justify-content-center align-items-center">
+            <h5 class=" "><span>{{ product.title }}</span></h5>
+        </div>
+        <h5 class="d-flex justify-content-center"><span>{{ product.price|persianNumber}} تومان</span></h5>
+
+
+        <!--Card footer-->
+        <div class="card-footer pb-0">
+            <div class="row mb-0">
+                <button class="btn bg-web-one" [routerLink]="['/products/' , product.code]">
+                    جزییات محصول
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!--Card content-->
+
+</div>
+<!--Card-->

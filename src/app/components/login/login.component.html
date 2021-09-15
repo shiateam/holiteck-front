@@ -1,1 +1,53 @@
-<p>login works!</p>
+<section class="h-100 my-5" *ngIf="!api.loggedIn">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100">
+            <div class="card-wrapper" style="width: 25rem;">
+                <!-- <div class="brand">
+                    <h1>Holiteck</h1>
+                </div> -->
+                <div class="card fat">
+                    <h4 class="card-header bg-web-one">Holitech</h4>
+                    <div class="card-body">
+                        <h2>ورود و ثبت نام</h2>
+                        <form class="my-login-validation">
+                            <div *ngIf="message && showAlert" class="alert alert-danger alert-dismissible fade show" role="alert" [ngClass]="fadeAlert()">
+                                {{message}}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            <div class="form-group form-floating mb-3">
+                                <input class="form-control" id="mobile" [formControl]="username" name="mobile" placeholder="name@example.com" required>
+                                <label for="mobile">شماره موبایل خود را وارد کنید</label>
+                                <div *ngIf="username.touched && username.invalid" class="pt-1">
+                                    <div *ngIf="username.errors.required" class="alert alert-danger"> موبایل را وارد کنید</div>
+                                    <!-- <div *ngIf="username.errors.pattern">شماره وارد شده صحیح نمی باشد</div> -->
+                                </div>
+                            </div>
+
+                            <div class="form-group form-floating mb-3">
+                                <input id="password" type="password" class="form-control" [formControl]="password" name="password" required placeholder="name@example.com">
+                                <label for="password">رمزعبور
+                                </label>
+                                <div class="invalid-feedback">
+                                    Password is required
+                                </div>
+                                <a routerLink="/forget-pass" class="pt-3">
+                                    فراموشی رمز عبور
+                                    <fa-icon [icon]="caret" style="position: absolute; padding-right: 10px; padding-top: 4px;" ></fa-icon>
+                                   </a>
+                            </div>
+
+                            <div class="d-grid gap-2 mt-2"> <button (click)="onLogin()" class="btn bg-web-one" style=" color: #fff;">
+                  ورود
+                </button></div>
+
+
+                            <div class="mt-4 text-center">
+                                هنوز ثبت نام نکرده ام? <a routerLink="/get-phone/">ایجاد حساب کاربری</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

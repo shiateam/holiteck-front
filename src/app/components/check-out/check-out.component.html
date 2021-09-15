@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="row my-5 ">
+        <div class="col-xl-9 col-md-8 my-4 pb-4">
+            <div class="jumbotron card-body" *ngIf="Address">
+                <h4 class="">آدرس تحویل سفارش</h4>
+                <p class="lead">{{Address.province}}،{{Address.city}}،{{Address.district}} </p>
+                <p class="username"> <i class="fa fa-user"></i> {{Address.first_name}} {{Address.last_name}}</p>
+                <hr class="my-4">
+
+                <a class="changeAddress" (click)="open(content)">  تغییر یا ویرایش آدرس  <i class="bx bx-chevron-left"></i></a>
+                <!-- <form>
+                <div class="form-group row">
+                    <input class="col-3 form-control " placeholder="نام  گیرنده">
+                    <input class="col-3 form-control mr-2" placeholder="نام خانوادگی گیرنده">
+                    <input class="col-3 form-control mr-2" placeholder="شماره موبایل گیرنده">
+                </div>
+                <div class="row d-flex justify-content-end">
+                    <input type="button" class="btn  btn-danger" (click)="save()" [value]="title">
+                </div>
+            </form> -->
+                <ng-template #content let-modal>
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="modal-basic-title">ویرایش محل ارسال</h4>
+                        <!-- <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                    <span aria-hidden="true">&times;</span>
+                  </button> -->
+                    </div>
+                    <div class="modal-body">
+                        <form class="text-center border border-light p-5 ">
+
+                            <p class="h4 mb-4">آدرس خریدار</p>
+                            <div class="form-row mb-4  input-group">
+                                <div class="col p-1">
+                                    <input [formControl]="first_name" class="form-control" placeholder="نام">
+                                </div>
+                                <div class="col p-1">
+                                    <!-- Last name -->
+                                    <input [formControl]="last_name" id="defaultRegisterFormLastName" class="form-control" placeholder="نام خانوادگی ">
+                                </div>
+                            </div>
+                            <div class="form-row mb-4 input-group">
+                                <div class="col p-1">
+                                    <input [formControl]="province" id="defaultRegisterFormLastName" class="form-control" placeholder="استان ">
+                                </div>
+                                <div class="col p-1">
+                                    <!-- Last name -->
+                                    <input [formControl]="city" id="defaultRegisterFormLastName" class="form-control" placeholder="شهر ">
+                                </div>
+                            </div>
+                            <!-- Phone number -->
+                            <input type="text" id="defaultRegisterPhonePassword" class="form-control mb-4" placeholder=" آدرس" [formControl]="district">
+                            <div class="form-row mb-4">
+                                <div class="col">
+                                    <!-- Last name -->
+                                    <input id="defaultRegisterFormLastName" [formControl]="postcode" class="form-control" placeholder="کد پستی ">
+                                </div>
+                            </div>
+                            <!-- Sign up button -->
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark" (click)="changeAddress(modal)">ذخیره</button>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+        <!-- <div class="col-xl-3 col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <ul>
+                    <li> مبلغ پرداختی{{OrderInfo.totalprice}}</li>
+                    <li> موبایل{{OrderInfo.mobile}}</li>
+                </ul>
+            </div>
+
+            <button class="btn btn-success  btn-block text-center" (click)="payment(OrderInfo.totalprice,OrderInfo.mobile)">پرداخت</button>
+
+        </div>
+    </div> -->
+        <div class="col-xl-3 col-md-4 bg-web-two my-4 pb-4" *ngIf="OrderConfirmPrice ">
+            <div class="d-flex justify-content-between align-items-center pt-1">
+                <p class="  "> قیمت کالاها <span>({{OrderConfirmPrice.count |persianNumber}})</span> </p>
+                <p>{{OrderConfirmPrice.totalprice|persianNumber}} تومان</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="  "> تخفیف کالاها </p>
+                <p>{{OrderConfirmPrice.offprice|persianNumber}} تومان</p>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="  "> مبلغ نهایی</p>
+                <p>{{OrderConfirmPrice.totalprice |persianNumber}} تومان</p>
+            </div>
+            <div class="d-grid gap-2"><button class="btn bg-web-one " (click)="payment(OrderInfo.totalprice,OrderInfo.mobile)"> ادامه ی فرایند خرید</button></div>
+        </div>
+    </div>
+</div>
